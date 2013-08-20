@@ -35,7 +35,7 @@ class Module
                 'App\Model\Account' => function($sm) {
                 	if(!$sm->has('Account')) {
 	                    $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
-	                    $account = new = Model\Account($dbAdapter, new \Mlib\Model\Session($dbAdapter));
+	                    $account = new Model\Account($dbAdapter, new \Mlib\Model\Session($dbAdapter));
 						$sm->setService('Account', $account);
 					} else {
 						$account = $sm->get('Account');
@@ -48,10 +48,7 @@ class Module
 
     public function getAutoloaderConfig()
     {
-        return array(
-	        'Zend\Loader\ClassMapAutoloader' => array(
-	            __DIR__ . '/autoload_classmap.php',
-	        ),        
+        return array(      
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
