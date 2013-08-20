@@ -1,0 +1,10 @@
+{
+    "name": "app",
+    "description": "App Name",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*",
+	"mattjs/mlib" : "dev-master",
+	"mattjs/minify" : "dev-master"
+    }
+}
