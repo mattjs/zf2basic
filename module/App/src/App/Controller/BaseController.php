@@ -38,8 +38,6 @@ class BaseController extends AbstractActionController {
 		}
 		
 		$this->layout()->path = $request->getUri()->getPath();
-		$this->layout()->login_form = $login_form;
-		$this->layout()->signup_form = $signup_form;
 
         return parent::dispatch($request, $response);
     }
